@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: rgb(242, 115, 84);
+    background: linear-gradient(
+      90deg,
+      rgb(88, 49, 41) 0%,
+      rgba(241, 185, 142, 1) 100%
+    ); */
+    color: white;
+    background-color: #8ec5fc;
+    background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  }
+}
+
+@layer components {
+  #tsparticles {
+    z-index: -1;
+    position: absolute;
+  }
+  li:has(.nav-button) {
+    @apply py-1 px-2 transition ease-in-out delay-150 duration-300 bg-[#450e7b] rounded-md hover:bg-white hover:text-secondary;
+  }
+  li:has(.active-link) {
+    @apply -rotate-12 text-secondary bg-white;
+  }
+  li:has(.nav-btn){
+    @apply -rotate-0
+  }
+  .squada {
+    font-family: "Squada One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .resume-skill{
+    @apply hover:text-primary cursor-pointer mr-2
+  }
+  .edQu{
+    @apply text-3xl tracking-wider text-green-500 squada mb-3
+  }
+  .schoolSec{
+    @apply bg-gray-800 py-2 px-3 rounded-lg
+  }
+  .schoolSub{
+    @apply mb-1 text-green-500
+  }
+  .schoolYR{
+    @apply text-gray-300 text-justify mb-1 text-xs
+  }
+  .schoolDesc{
+    @apply text-gray-300 text-justify text-sm
+  }
+  .submit-btn-contact{
+    @apply  border-2 bg-primary rounded-md py-2 px-5 min-w-[50%] text-white place-self-center hover:border-primary hover:bg-white hover:text-primary shadow-lg text-xl uppercase
+  }
+  .contact-cards{
+    @apply  w-[35%] md:w-full bg-primary text-white -ml-1 md:-ml-0 rounded-md py-5 px-6 md:shadow-2xl md:bg-white md:text-black
+  }
+  .contact-page-info{
+    @apply flex gap-5 justify-center items-center text-xl mb-3 border-x-4 border-b-4 border-b-sky-300 py-1 w-3/4 m-auto
+  }
+  /* My Work Page */
+  .btn-works-nav-list{
+    @apply bg-sky-300 py-1 px-3 rounded-md border hover:border-sky-300 hover:bg-white
+    mb-3 mr-3 hover:text-primary
+  }
+  .works-content-card{
+    @apply mb-4 bg-green-300 p-3 rounded-md w-60 flex flex-col items-center
+  }
+  .works-content-card img{
+    @apply rounded-md w-48 mb-3
+  }
+  .works-card-visit{
+    @apply inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+  }
+  .works-card-code{
+    @apply py-2 px-4 ms-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700
+  }
+  .active-work-list{
+    @apply bg-black text-white
+  }
+
+
+
+
+
+  /* ADMIN DASHBOARD */
+  li:has(.active-link-admin){
+    @apply text-secondary bg-white;
+  }
+
+  .dashboard-work-input{
+    @apply py-1 px-3 rounded-sm outline-none
+  }
+  .dashboard-work-btn{
+    @apply py-1 px-3 bg-primary text-white rounded-md
+  }
+  .dashboard-work-btn:hover{
+    @apply bg-white text-primary
+  }
+
+  .dashboard-work-table{
+    @apply w-[60%] mt-5 m-auto
+  }
+  .dashboard-profile-data-view{
+    @apply font-bold tracking-wider border-b-2 border-b-green-500
+  }
+}
