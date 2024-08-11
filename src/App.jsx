@@ -18,15 +18,15 @@ import PrivateRoute from "./pages/admin/PrivateRoute";
 import useRegiser from "./components/admin/RegiserUrl";
 
 const App = () => {
-  // const register = useRegiser();
+  const register = useRegiser();
 
-  // if (register === null) {
-  //   return (
-  //     <div className=" text-2xl text-center mt-20 text-red-800 ">
-  //       Loading...
-  //     </div>
-  //   );
-  // }
+  if (register === null) {
+    return (
+      <div className=" text-2xl text-center mt-20 text-red-800 ">
+        Loading...
+      </div>
+    );
+  }
 
   return (
     <BrowserRouter>
